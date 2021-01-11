@@ -1,0 +1,59 @@
+@page:first {
+  @top-right {
+    background: none;
+  }
+  @bottom-center {
+    content: '';
+  }
+}
+
+@page {
+  size: A4;
+  margin: 27mm 10mm 27mm 10mm;
+  counter-increment: page;
+
+  @top-right {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url('../images/shonenada.jpg') no-repeat 0 0;
+    background-size: 100% 100%;
+  }
+
+  @bottom-center {
+    font-size: 9pt;
+    content: counter(page);
+    color: grey;
+    white-space: pre;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.cover {
+  position: relative;
+  text-align: center;
+}
+
+.cover img {
+  width: 100mm;
+  height: 100mm;
+}
+
+.title {
+  font-size: 36pt;
+  font-weight: 600;
+  margin-top: 20mm;
+}
+
+.page-sep {
+  page-break-before: always;
+}
+
+.team-info {
+  font-size: 13pt;
+  margin-top: 80mm;
+}

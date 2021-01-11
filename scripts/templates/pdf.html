@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="cover">
+  <img src="./images/shonenada.jpg" />
+  <div class="title"> Markdown to Pdf </div>
+  <div class="team-info"> &copy; {{ date }} </div>
+</div>
+
+{% for page in pages %}
+<div class="page">{{ page }}</div>
+{% endfor %}
+{% endblock %}
